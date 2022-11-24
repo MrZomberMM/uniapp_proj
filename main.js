@@ -8,7 +8,7 @@ import {
 uni.$http = $http
 
 // 配置请求根路径
-$http.baseUrl = 'https://www.uinav.com/api/public/v1'
+$http.baseUrl = 'https://www.uinav.com'
 
 // 请求拦截器
 $http.beforeRequest = function(options) {

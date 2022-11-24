@@ -4,7 +4,6 @@
 		    "path" : "pages/home/home",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
 		        "enablePullDownRefresh": false
 		    }
 		    
@@ -13,7 +12,6 @@
             "path" : "pages/cate/cate",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -22,7 +20,6 @@
             "path" : "pages/cart/cart",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
@@ -31,15 +28,30 @@
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "subpkg/goods_details/goods_details",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "subpkg/goods_list/goods_list",
+            "style" :                                                                                    
+            {
                 "enablePullDownRefresh": false
             }
             
         }
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "我的小程序",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "MZ优选",
 		"navigationBarBackgroundColor": "#f80000",
 		"backgroundColor": "#ffffff"
 	},
@@ -54,7 +66,7 @@
 			},
 			{
 				"pagePath": "pages/cate/cate",
-				"text": "发现",
+				"text": "分类",
 				"iconPath": "static/tab_icons/cate.png",
 				"selectedIconPath": "static/tab_icons/cate-active.png"
 			},
