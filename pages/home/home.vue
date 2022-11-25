@@ -11,9 +11,9 @@
 		
 		<!-- 首页分类选项 -->
 		<view class="catitems-list" >
-			<navigator url="/cate/cate.vue" open-type="switchTab" class="catitems-img" v-for="(item, i) in catitemList" :key="i">
+			<view class="catitems-img" v-for="(item, i) in catitemList" :key="i" @click="clickCatitemsHandle(item)">
 				<image :src="item.image_src" mode=""></image>
-			</navigator>
+			</view>
 		</view>
 		
 		<!-- 瀑布流 -->
@@ -23,7 +23,9 @@
 					<image :src="item.floor_title.image_src" mode="widthFix"></image>
 				</view>
 				<view class="floor-img-box">
-					<image :src="item.product_list[0].image_src" mode="widthFix" :style="[{width: item.product_list[0].image_width + 'px'}]"></image>
+					<view class="left-img-box">
+						<image :src="item.product_list[0].image_src" mode="widthFix" :style="[{width: item.product_list[0].image_width + 'rpx'}]"></image>
+					</view>
 					<view class="right-img-box">
 						<block v-for="(item2, i2) in item.product_list" :key="i2">
 							<image v-if="i2 !== 0" :src="item2.image_src" mode="widthFix" :style="[{width: item2.image_width + 'rpx'}]"></image>
@@ -75,6 +77,11 @@
 				}
 				this.floordataList = res.message
 				console.log(this.floordataList);
+			},
+			clickCatitemsHandle(item){
+				uni.switchTab({
+					url:"/pages/cate/cate"
+				})
 			}
 		},
 		onLoad(){
